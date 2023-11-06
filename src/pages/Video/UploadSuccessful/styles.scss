@@ -1,0 +1,15 @@
+@import "/src/styles/mixins.scss";
+
+.upload-successful-component {
+  @include flex(row, center, center);
+  background-color: #0c0c0f;
+  height: calc(100% + 10px);
+  .title {
+    color: #fff;
+    font-family: Outfit;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}

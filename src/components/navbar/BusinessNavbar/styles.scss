@@ -1,0 +1,123 @@
+@import "/src/styles/mixins.scss";
+.business-navbar {
+  // Your styles for .business-navbar here
+  @include flex(row, space-between, center);
+  width: calc(100% - 70px);
+  padding: 20px 35px;
+  background: #101014;
+  box-shadow: 0px 9px 12.6px 0px rgba(0, 0, 0, 0.1); /* Reduced box-shadow values by 10% */
+  position: absolute;
+  z-index: 5;
+  top: 0;
+
+  .left-area {
+    // Your styles for .left-area here
+    @include flex(row, start, center, 27px); /* Reduced margin by 10% */
+    .logo-area {
+      // Your styles for .logo-area here
+      img {
+        // width: 70.2px; /* Reduced image width by 10% */
+        height: 40px;
+        cursor: pointer;
+      }
+    }
+
+    .menu-area {
+      // Your styles for .menu-area here
+      @include flex(row, start, center, 27px); /* Reduced margin by 10% */
+
+      .menu-item {
+        color: rgba(255, 255, 255, 0.63); /* Reduced color opacity by 10% */
+        font-family: Outfit;
+        font-size: 18px; /* Reduced font size by 10% */
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        @include hoverEffect();
+        cursor: pointer;
+      }
+      .menu-item-selected {
+        font-family: Outfit;
+        font-size: 18px; /* Reduced font size by 10% */
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        background: var(
+          --primary,
+          linear-gradient(168deg, #ffda46 0%, #ffae00 100%)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @include hoverEffect();
+        cursor: pointer;
+      }
+    }
+  }
+
+  .right-area {
+    // Your styles for .right-area here
+    position: relative;
+    .profile-area {
+      border-radius: 67.5px; /* Reduced border radius by 10% */
+      border: 0.9px solid #373737; /* Reduced border width by 10% */
+      background: #212121;
+      padding: 9px 18px; /* Reduced padding by 10% */
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      position: absolute;
+      right: 0;
+      top: -34.2px; /* Reduced top position by 10% */
+      width: 162px; /* Reduced width by 10% */
+    }
+    .profile-area-opened {
+      border-radius: 18px; /* Reduced border radius by 10% */
+      border: 0.9px solid #373737; /* Reduced border width by 10% */
+      background: #212121;
+      padding: 18px 18px; /* Reduced padding by 10% */
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      position: absolute;
+      right: 0;
+      top: -34.2px; /* Reduced top position by 10% */
+      width: 162px; /* Reduced width by 10% */
+      @include flex(column, start, start, 18px); /* Reduced margin by 10% */
+    }
+    .profile-card {
+      // Your styles for .profile-card here
+      @include flex(row, start, center);
+      border-bottom: none;
+      img {
+        width: 45px; /* Reduced image width by 10% */
+      }
+
+      .profile-info {
+        // Your styles for .profile-info here
+        margin: 0 18px 0 9px; /* Reduced margin by 10% */
+        .profile-name {
+          color: #fff;
+          font-family: Outfit;
+          font-size: 18px; /* Reduced font size by 10% */
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: -0.3672px; /* Reduced letter spacing by 10% */
+        }
+
+        .user-name {
+          color: rgba(255, 255, 255, 0.63); /* Reduced color opacity by 10% */
+          font-family: Outfit;
+          font-size: 14.4px; /* Reduced font size by 10% */
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: -0.3672px; /* Reduced letter spacing by 10% */
+        }
+      }
+
+      .arrow-down {
+        width: 9px; /* Reduced width by 10% */
+      }
+    }
+  }
+}

@@ -1,0 +1,192 @@
+@import "/src/styles/mixins.scss";
+
+.business-profile-card {
+  // Styles for the outermost container
+  width: 100%;
+  margin-bottom: 60px;
+
+  .top-area {
+    // Styles for the top area
+    @include flex(row, start, start, 20px);
+    width: 100%;
+    .left-area {
+      // Styles for the left area
+      img {
+        width: 30px;
+      }
+    }
+    .right-area {
+      // Styles for the right area
+      width: 100%;
+      .header-area {
+        // Styles for the header area
+        padding-bottom: 10px;
+        .title-Area {
+          // Styles for the title area
+          @include flex(row, space-between, center);
+          .title-container {
+            // Styles for the title container
+            // Add styles for the title typo and type tag here
+            @include flex(row, start, center, 10px);
+            .title {
+              font-family: Outfit;
+              font-size: 20px;
+              font-weight: 500;
+              line-height: 25px;
+              letter-spacing: 0em;
+              text-align: left;
+              cursor: pointer;
+              max-width: 300px;
+            }
+            .type {
+              font-family: Outfit;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 18px;
+              letter-spacing: 0em;
+              text-align: left;
+              color: #6a6a6a;
+              padding: 5px 10px;
+              background-color: #ededed;
+              border-radius: 30px;
+            }
+          }
+          .time-container {
+            // Styles for the time container
+            // Add styles for the time ago typo here
+            .time {
+              font-family: Outfit;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 20px;
+              letter-spacing: 0em;
+              text-align: right;
+              color: #a7a7a7;
+            }
+          }
+        }
+        .address-area {
+          // Styles for the address area
+          // Add styles for the address logo and address here
+          padding: 5px 0;
+          @include flex(row, start, center, 10px);
+          img {
+            height: 20px;
+          }
+          .address {
+            color: var(--text-70, #6a6a6a);
+            font-family: Outfit;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration-line: underline;
+          }
+        }
+        .tags-area {
+          // Styles for the tags area
+          padding: 5px 0;
+          @include flex(row, start, center, 15px);
+          .tag {
+            // Styles for the individual tag
+            // Add styles for the tag icon and tag text here
+            @include flex(row, start, center, 5px);
+            img {
+              height: 15px;
+            }
+            .tag-title {
+              color: var(--text-70, #6a6a6a);
+              text-align: center;
+              font-family: Outfit;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+        }
+      }
+      .business-head-area {
+        // Styles for the business head area
+        margin-left: 15px;
+        .name-area {
+          // Styles for the name area
+          // Add styles for the name typo and designation tag here
+          @include flex(row, start, center, 10px);
+          .name {
+            color: var(--text-70, #6a6a6a);
+            font-family: Outfit;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+          .position {
+            font-family: Outfit;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #6a6a6a;
+            padding: 5px 10px;
+            background-color: #ededed;
+            border-radius: 30px;
+          }
+        }
+        .contact-area {
+          // Styles for the contact area
+          @include flex(row, start, center, 10px);
+          margin-bottom: 20px;
+          padding: 5px 0;
+          .contact {
+            // Styles for the contact
+            // Add styles for the email image and email detail here
+            @include flex(row, start, center, 5px);
+            img {
+              height: 15px;
+            }
+            .text {
+              color: var(--text-70, #6a6a6a);
+              font-family: Outfit;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              text-decoration-line: underline;
+            }
+          }
+        }
+      }
+      .socials-area {
+        // Styles for the socials area
+        @include flex(row, start, center, 10px);
+        flex-wrap: wrap;
+
+        .social {
+          // Styles for the individual social
+          // Add styles for the social icon and social id here
+          @include flex(row, start, center, 5px);
+          img {
+            height: 20px;
+          }
+          .social-link {
+            color: var(--text-70, #6a6a6a);
+            font-family: Outfit;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration-line: underline;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .bottom-area {
+    // Styles for the bottom area
+    // Add styles for the approve button and deny button here
+    @include flex(row, start, center, 20px);
+  }
+}

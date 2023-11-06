@@ -1,0 +1,18 @@
+@import "/src/styles/mixins.scss";
+
+.normal-select {
+  .MuiOutlinedInput-notchedOutline {
+    border-radius: 57px;
+    border: 1px solid var(--border, #dcdcdc) !important;
+    outline: none;
+  }
+  width: 100%;
+  .MuiInputBase-root {
+    background-color: #ededed;
+    border-radius: 50px;
+    width: 100% !important;
+  }
+  .MuiSelect-select {
+    padding: 10px 20px;
+  }
+}

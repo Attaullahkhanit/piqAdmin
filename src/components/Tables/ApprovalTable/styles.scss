@@ -1,0 +1,167 @@
+@import "/src/styles/mixins.scss";
+.approval-table {
+  margin: 20px 0;
+  table {
+    width: 100%;
+    border: 1px solid #ededed;
+    border-radius: 16px;
+    height: 200px;
+    overflow-y: auto;
+    thead {
+      width: 100%;
+      background-color: white;
+    }
+    th {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      @include flex(row, start, center);
+      border-bottom: 1px solid #ededed;
+
+      td {
+        display: flex;
+        flex: 4;
+      }
+    }
+    tbody {
+      display: block;
+      width: 100%;
+      overflow: auto;
+      max-height: calc(100vh - 380px);
+      @include hideScrollbar();
+      tr {
+        width: 100%;
+        @include flex(row, start, start);
+        border-bottom: 1px solid #ededed;
+
+        td {
+          display: flex;
+          flex: 4;
+        }
+      }
+    }
+  }
+  .sorting-header {
+    @include flex(row, start, center, 10px);
+    cursor: pointer;
+    .sorting-container {
+      @include flex(column, center, center, 2px);
+      img {
+        height: 5px;
+      }
+    }
+  }
+  .content-area {
+    @include flex(row, start, start, 10px);
+    padding: 10px 0;
+    .business-image {
+      width: 80px;
+      border-radius: 50%;
+      height: 80px;
+      object-fit: cover;
+    }
+    .video-thumbnail {
+      border-radius: 16px;
+      height: 80px;
+      cursor: pointer;
+    }
+    .content-details-area {
+      .title-container {
+        width: 200px;
+        white-space: nowrap;
+        margin-right: 10px;
+        .title {
+          color: var(--text-100, #000);
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%; /* 27px */
+          cursor: pointer;
+          white-space: nowrap;
+        }
+      }
+      .tags-container {
+        @include flex(row, start, center, 5px);
+        margin: 10px 0;
+        flex-wrap: wrap;
+        .tag-group {
+          @include flex(row, start, center, 5px);
+          .tag-text {
+            color: var(--text-70, #6a6a6a);
+            font-family: Outfit;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19.6px; /* 140% */
+          }
+
+          img {
+            height: 5px;
+            width: 5px;
+          }
+        }
+      }
+      .profile-container {
+        @include flex(row, start, center, 10px);
+        margin-bottom: 20px;
+        img {
+          width: 30px;
+          border-radius: 50%;
+        }
+        .business-name {
+          color: var(--text-70, #6a6a6a);
+          text-align: center;
+          font-family: Outfit;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+      .business-tag {
+        display: inline-flex;
+        padding: 2px 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 57px;
+        background-color: var(--seperator-100, #ededed);
+        color: var(--text-70, #6a6a6a);
+        text-align: right;
+        font-family: Outfit;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19.6px; /* 140% */
+      }
+    }
+  }
+  .row-content-normal {
+    color: var(--text-70, #6a6a6a);
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 10px 0;
+  }
+  .row-content-stack {
+    padding: 10px 0;
+    @include flex(column, center, center, 10px);
+    .alert {
+      cursor: pointer;
+    }
+  }
+  .actions-container {
+    @include flex(column, flex-end, end, 20px);
+    padding: 20px 0;
+    img {
+      width: 30px;
+      cursor: pointer;
+    }
+  }
+  .cursor-pointer{
+    cursor: pointer;
+  }
+}

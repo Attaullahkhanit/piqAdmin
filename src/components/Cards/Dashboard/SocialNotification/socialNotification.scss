@@ -1,0 +1,66 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/variables.scss";
+
+.social-notification-card {
+  padding: 15px 0;
+  .top-area {
+    @include flex(row, start, start, 20px);
+    .left-area {
+      img {
+        width: 40px;
+      }
+    }
+    .right-area {
+      .title-area {
+        @include flex(row, space-between, center);
+        padding: 5px 0;
+        .title {
+          font-family: Outfit;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        .time {
+          color: #a7a7a7;
+          text-align: right;
+          font-family: Outfit;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 19.6px; /* 140% */
+        }
+      }
+      .description-area {
+        p {
+          color: #6a6a6a;
+          font-family: Outfit;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 19.6px; /* 140% */
+        }
+      }
+    }
+  }
+  .bottom-area {
+    @include flex(row, space-between, center, 20px);
+    margin-top: 10px;
+    .title {
+      color: var(--text-70, #6a6a6a);
+      font-family: Outfit;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .value {
+      color: var(--text-100, #000);
+      font-family: Outfit;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+}

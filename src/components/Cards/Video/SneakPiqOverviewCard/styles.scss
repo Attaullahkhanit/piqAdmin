@@ -1,0 +1,80 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/variables.scss";
+
+.video-overview-card {
+  // Your styles for .video-overview-card here
+  position: relative;
+  height: 315px;
+  cursor: pointer;
+  @include hoverEffect(1.02);
+  .video-image {
+    // Your styles for .video-image here
+    position: absolute;
+    width: 100%;
+    height: 315px;
+   // z-index: -1;
+    border-radius: 16px;
+    filter: brightness(0.8);
+  }
+
+  .video-details-container {
+    // Your styles for .video-details-container here
+    height: 315px;
+    position: relative;
+
+    .top-area {
+      // Your styles for .top-area here
+      position: absolute;
+      top: 0;
+      padding: 10px;
+      width: calc(100% - 20px);
+      @include flex(row, space-between, center);
+
+      .sneakpiq-title{
+        color: #FFF;
+        font-family: Outfit;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      .pending {
+        border-radius: 76px;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 8px 10px;
+        color: #fff;
+        font-family: Outfit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      .draggable-icon {
+        // Your styles for .draggable-icon here
+        width: 25px;
+        cursor: pointer;
+      }
+
+      .views-container {
+        // Your styles for .views-container here
+        @include flex(row, start, center, 10px);
+        border-radius: 76px;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        .views {
+          color: #fff;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 15.4px; /* 96.25% */
+        }
+
+        .video-icon {
+          // Your styles for .video-icon here
+          width: 15px;
+        }
+      }
+    }
+  }
+}

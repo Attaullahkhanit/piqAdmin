@@ -1,0 +1,169 @@
+@import "/src/styles/mixins.scss";
+
+.add-video {
+  // Add any styles for the add-video container here
+  color: white;
+  background-color: #0c0c0f;
+  height: calc(100% + 10px);
+  @include flex(row, center, start);
+  overflow-y: scroll;
+
+  position: relative;
+  .add-video-content-container {
+    // Add any styles for the content container here
+    width: 40%;
+    padding: 40px 20px;
+
+    .title-text {
+      // Add any styles for the title text here
+      color: #fff;
+      font-family: Outfit;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 20px;
+    }
+
+    .type-container {
+      // Add any styles for the type container here
+      @include flex(row, center, center, 10px);
+      flex-wrap: wrap;
+
+      .type-card {
+        // Add any styles for the type card here
+        // padding: 15px 10px;
+        cursor: pointer;
+        height: 95px;
+        width: 95px;
+        border-radius: 12px;
+        background-color: #101014;
+
+        @include flex(column, center, center, 10px);
+
+        svg {
+          // Add any styles for the SVG (e.g., Piq icon) here
+          width: 35px;
+        }
+
+        .type-text {
+          // Add any styles for the type text here
+          text-align: center;
+          white-space: nowrap;
+          font-family: Outfit;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 15.4px; /* 96.25% */
+        }
+        .selected-text {
+          background: var(
+            --button-primary-gradient,
+            linear-gradient(168deg, #ffda46 0%, #ffae00 100%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .normal-text {
+          color: #fff;
+          text-align: center;
+          font-family: Outfit;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 15.4px; /* 96.25% */
+        }
+      }
+      .selected {
+        border: 1px solid #ffae00;
+      }
+      .normal {
+        border: 1px solid #1b1b1b;
+      }
+    }
+    .description-text {
+      padding: 20px 40px;
+      text-align: justify;
+      font-family: Outfit;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      background: var(
+        --primary,
+        linear-gradient(168deg, #ffda46 0%, #ffae00 100%)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      height: 100px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .upload-container {
+      // Add any styles for the upload container here
+      margin: 30px 0;
+      @include flex(row, space-between, center, 20px);
+
+      .upload-text-container {
+        // Add any styles for the upload text container here
+
+        .title-text {
+          color: #fff;
+          font-family: Outfit;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+
+        .subtitle-text {
+          // Add any styles for the subtitle text here
+          color: #fff;
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 19.6px; /* 108.889% */
+          opacity: 0.4;
+        }
+      }
+
+      .upload-button-area {
+        // Add any styles for the PrimaryButton component here
+        @include flex(column, center, center, 20px);
+        .button-container {
+          width: 100px;
+          transform: translateX(-25px);
+          
+        }
+        .subtitle-text {
+          // padding: 20px 40px;
+          text-align: justify;
+          font-family: Outfit;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          background: var(
+            --primary,
+            linear-gradient(168deg, #ffda46 0%, #ffae00 100%)
+          );
+          transform: translateX(-10px);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          // height: 100px;
+         
+        }
+      }
+    }
+  }
+  .next-button-container {
+    position:fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+  }
+}

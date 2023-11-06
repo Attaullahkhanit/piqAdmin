@@ -1,0 +1,181 @@
+@import "/src/styles/mixins.scss";
+
+.add-business-modal-container {
+  // Styles for the modal container here
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 30%;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+
+  outline: none !important;
+  .top-container {
+    // Styles for the top container here
+    @include flex(column, start, center, 10px);
+    margin-bottom: 20px;
+
+    .delete-icon {
+      // Styles for the delete icon here
+      width: 50px;
+    }
+
+    .modal-title {
+      color: var(--text-100, #000);
+      font-family: Outfit;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    .modal-subtitle {
+      color: var(--text-40, #a7a7a7);
+      font-family: Outfit;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19.6px; /* 108.889% */
+    }
+  }
+
+  .bottom-container {
+    // Styles for the bottom container here
+    @include flex(row, space-between, center, 20px);
+
+    .outline-button {
+      // Styles for the OutlineButton here
+    }
+
+    .danger-button {
+      // Styles for the DangerButton here
+    }
+  }
+}
+.add-business-user {
+  // Styles for the add business user container here
+  @include flex(row, center, start);
+  height: calc(100vh - 80px);
+  overflow-y: scroll;
+  @include hideScrollbar();
+
+  .add-business-user-content-area {
+    // Styles for the content area here
+    width: 40%;
+    padding: 40px 0;
+
+    .user-image-container {
+      // Styles for the user image container here
+      position: relative;
+      @include flex(row, center, center);
+      margin-bottom: 25px;
+      .image-outer {
+        padding: 65px;
+        border-radius: 50%;
+        box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.1);
+        .user-image {
+          width: 70px;
+        }
+      }
+      // Add styles for the user image here if needed
+
+      .user-role-container {
+        // Styles for the user role container here
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        transform: translateX(-50%);
+        padding: 5px 14px;
+        border-radius: 49px;
+        border: 2px solid #fff;
+        background: linear-gradient(
+            0deg,
+            rgba(0, 158, 6, 0.2) 0%,
+            rgba(0, 158, 6, 0.2) 100%
+          ),
+          #fff;
+        box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.06);
+        .user-role {
+          // Styles for the user role text here
+          color: var(--green-100, #009e06);
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+
+    .user-form-container {
+      // Styles for the user form container here
+      margin-bottom: 30px;
+
+      .form-label {
+        color: var(--text-70, #6a6a6a);
+        font-family: Outfit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 8px;
+      }
+    }
+
+    .user-form-actions {
+      // Styles for the user form actions container here
+      margin: 20px 0;
+      @include flex(column, start, center, 20px);
+      .button-container {
+        width: 250px;
+      }
+      .remove-text {
+        color: var(--text-40, #a7a7a7);
+        text-align: center;
+        font-family: Outfit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+        cursor: pointer;
+      }
+    }
+
+    .admin-transfer-container {
+      // Styles for the admin transfer container here
+
+      .admin-transfer-text {
+        color: var(--text-40, #a7a7a7);
+        text-align: center;
+        font-family: Outfit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .connect-text {
+        background: var(
+          --primary,
+          linear-gradient(168deg, #ffda46 0%, #ffae00 100%)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: Outfit;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}

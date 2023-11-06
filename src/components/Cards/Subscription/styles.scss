@@ -1,0 +1,101 @@
+@import "/src/styles/mixins.scss";
+
+.subscription-card {
+  width: 340px;
+  border-radius: 16px;
+  background: var(--foreground, #fff);
+  box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.06);
+  .subscription-card-header {
+    padding: 20px 30px;
+    border-radius: 16px 16px 0px 0px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    background: #101014;
+    @include flex(row, start, center, 20px);
+    .left-area {
+      img {
+        width: 30px;
+      }
+    }
+
+    .right-area {
+      .title {
+        color: #fff;
+        font-family: Outfit;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      .price {
+        color: #fff;
+        font-family: Outfit;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        span {
+          color: var(--text-40, #a7a7a7);
+          font-family: Outfit;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+  }
+
+  .details-area {
+    padding: 20px 30px;
+    @include flex(column, start, left, 20px);
+    .detail-group {
+      // Your styles for .detail-group here
+      @include flex(row, start, center, 10px);
+
+      img {
+        // Your styles for img inside .detail-group here
+        width: 20px;
+      }
+
+      .detail {
+        color: var(--text-40, #a7a7a7);
+        text-align: left;
+        font-family: Outfit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .detail-cancelled {
+        color: var(--text-40, #a7a7a7);
+        text-align: center;
+        font-family: Outfit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  .subscription-bottom-area {
+    // Your styles for .bottom-area here
+    padding: 20px;
+
+    .cancel {
+      text-align: center;
+      margin-top: 5px;
+      color: var(--text-100, #000);
+      text-align: center;
+      font-family: Outfit;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "/src/styles/mixins.scss";
+
+.add-profile-header {
+  padding: 30px 0;
+  .heading {
+    color: var(--text-100, #000);
+    font-family: Outfit;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .description {
+    color: var(--text-40, #a7a7a7);
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

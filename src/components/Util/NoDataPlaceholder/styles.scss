@@ -1,0 +1,19 @@
+@import '/src/styles/mixins.scss';
+.no-data-placeholder {
+  @include flex(column, center, center);
+  height: 100%;
+  width: 100%;
+  svg {
+    height: 200px;
+    width: 200px;
+  }
+  p {
+    font-family: Outfit;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    color: #6a6a6a;
+  }
+}

@@ -1,0 +1,58 @@
+@import "/src/styles/mixins.scss";
+
+.filter-input-container {
+  @include flex(row, start, center, 10px);
+  width: 100%;
+  .close-button{
+      cursor: pointer;
+  }
+  .filter-input-field {
+    @include flex(row, start, center, 10px);
+    border-radius: 57px;
+    border: 1px solid var(--border, #dcdcdc);
+    background: var(--foreground, #fff);
+    padding: 10px 20px;
+    width: 100%;
+    .MuiOutlinedInput-notchedOutline {
+      border: none;
+      outline: none;
+      padding: 0 !important;
+    }
+    .MuiInputBase-root {
+      background-color: #ededed;
+      padding: 0px 15px;
+      border-radius: 50px;
+    }
+    .MuiSelect-select {
+      padding: 8px 10px 8px 2px;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      border: none;
+      height: 20px;
+      color: var(--text-70, #6a6a6a);
+      font-family: Outfit;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19.6px; /* 140% */
+      &::placeholder {
+        color: #a7a7a7;
+        font-family: Outfit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    img {
+      height: 20px;
+    }
+  }
+}

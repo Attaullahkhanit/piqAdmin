@@ -1,0 +1,108 @@
+@import "/src/styles/mixins.scss";
+
+.content-screen-business-profile-card {
+  box-sizing: border-box;
+  @include flex(row, start, center, 15px);
+  width: calc(100% - 20px);
+  padding: 20px;
+  border-bottom: 1px solid #EDEDED;
+  @include hoverEffect(1.02);
+  cursor: pointer;
+  .left-area {
+    .profile-picture {
+      width: 49px;
+      height: 49px;
+      flex-shrink: 0;
+      border-radius: 49px;
+      border: 1px solid var(--border, #dcdcdc);
+    }
+  }
+
+  .right-area {
+    width: 100%;
+    .title-area {
+      @include flex(row, space-between, center, 0px);
+      .title-container {
+        @include flex(row, start, center, 5px);
+        // margin-bottom: 5px;
+        align-items: baseline;
+        .title-text {
+          color: var(--text-100, #000);
+          font-family: Outfit;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          max-width: 300px;
+        }
+
+        .pill-container {
+          display: inline-flex;
+          padding: 4px 6px;
+          justify-content: center;
+          align-items: center;
+          gap: 2px;
+          border-radius: 57px;
+          background: var(--seperator-100, #ededed);
+          .type-text {
+            color: var(--text-70, #6a6a6a);
+            font-family: Outfit;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+
+      .time-text {
+        color: var(--text-40, #a7a7a7);
+        text-align: right;
+        font-family: Outfit;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19.6px; /* 140% */
+      }
+    }
+
+    .address-area {
+      @include flex(row, start, center, 10px);
+      margin-bottom: 5px;
+      .address-icon {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+      }
+
+      .address-text {
+        color: var(--text-70, #6a6a6a);
+        font-family: Outfit;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+      }
+    }
+
+    .tags-area {
+      @include flex(row, start, center, 5px);
+      .tag-container {
+        @include flex(row, start, center, 5px);
+        .tag-text {
+          color: var(--text-70, #6a6a6a);
+          text-align: center;
+          font-family: Outfit;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .divider {
+        }
+      }
+    }
+  }
+}

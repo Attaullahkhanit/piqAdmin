@@ -1,0 +1,347 @@
+@import "/src/styles/mixins.scss";
+
+.profile-details {
+  padding: 1.25rem 10%;
+  height: calc(100vh - 9.375rem);
+  overflow-y: scroll;
+  position: relative;
+
+  .cropper-container {
+    position: relative;
+  }
+  .sub-title {
+    color: var(--text-100, #000);
+    font-family: Outfit;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .form-area {
+    .assets-container {
+      @include flex(row, start, center, 3.125rem);
+      width: 100%;
+      .logo-area {
+        width: 21.875rem;
+        .text {
+          color: var(--text-70, #6a6a6a);
+          font-family: Outfit;
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .profile-picture-container {
+          @include flex(row, start, center, 1.25rem);
+          margin-top: 1.25rem;
+          img {
+            height: 10.625rem;
+            width: 10.625rem;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+          .no-image-placeholder-container {
+            padding: 3.75rem;
+            border: 0.125rem solid #dcdcdc;
+            border-radius: 50%;
+            .no-profile-image {
+              height: 2.5rem;
+              width: 2.5rem;
+            }
+            .profile-image {
+              height: 10.625rem;
+              border-radius: 50%;
+            }
+          }
+
+          .action-buttons-container {
+            width: 100%;
+          }
+        }
+      }
+
+      .background-area {
+        width: 21.875rem;
+        .text {
+          color: var(--text-70, #6a6a6a);
+          font-family: Outfit;
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 400;
+          line-line-height: normal;
+        }
+
+        .background-container {
+          @include flex(row, start, center, 1.25rem);
+          margin-top: 1.25rem;
+          img {
+            height: 10.625rem;
+            width: 10.625rem;
+            object-fit: cover;
+            border-radius: 1rem;
+          }
+          .no-image-placeholder-container {
+            padding: 3.75rem;
+            border: 0.125rem solid #dcdcdc;
+            border-radius: 1rem;
+
+            .no-profile-image {
+              height: 2.5rem;
+              width: 2.5rem;
+            }
+            .profile-image {
+              height: 10.625rem;
+              border-radius: 1rem;
+            }
+          }
+
+          .action-buttons-container {
+            width: 100%;
+            @include flex(column, center, center, 0.625rem);
+          }
+        }
+      }
+    }
+    .fields-area {
+      @include flex(row, space-between, center);
+      row-gap: 1.25rem;
+      flex-wrap: wrap;
+      margin: 1.875rem 0;
+      width: 100%;
+      .field-container {
+        width: calc(50% - 1.25rem);
+        .css-aun6ly {
+          position: absolute;
+          background-color: #fff;
+          width: 100%;
+          z-index: 111;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);
+          border-radius: 4px;
+          max-height: 120px;
+          overflow: hidden;
+      }
+      }
+      .field-container-full {
+        width: 100%;
+      }
+      .title-container {
+        @include flex(row, start, center, 0.5rem);
+        margin: 0.3125rem 0;
+        img {
+          height: 0.9375rem;
+        }
+        .title {
+          color: var(--text-70, #6a6a6a);
+          font-family: Outfit;
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+    .tag {
+      display: inline-flex;
+      margin: 10px 5px;
+      padding: 14px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      border-radius: 64px;
+      border: 1px solid var(--Primary, #a7a7a7);
+      color: #a7a7a7;
+      background: var(--Foreground, #fff);
+      cursor: pointer;
+    }
+    .tag-selected {
+      display: inline-flex;
+      margin: 10px 5px;
+      padding: 14px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      border-radius: 64px;
+      border: 1px solid var(--Primary, #ffae00);
+      color: #ffae00;
+      background: var(--Foreground, #fff);
+      cursor: pointer;
+    }
+  }
+  .timings-container {
+    margin-bottom: 3.125rem;
+    .hours {
+      color: var(--text-70, #6a6a6a);
+      font-family: Outfit;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 1.25rem;
+    }
+    .timing-schedule-container {
+      // @include flex(row, space-between, center);
+      // flex-wrap: wrap;
+    }
+  }
+  .subscriptions-container {
+    width: 100%;
+    @include flex(row, space-between, start, 1.25rem);
+    margin: 2.5rem 0;
+  }
+  .user-access-container {
+    margin: 1.25rem 0 8.75rem 0;
+
+    .user-access-title-area {
+      // Styles for the title area here
+      @include flex(row, start, center, 1.25rem);
+
+      .sub-title {
+        color: var(--text-100, #000);
+        font-family: Outfit;
+        font-size: 1.375rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 0px;
+      }
+
+      .add-user-button-container {
+        border-radius: 6.875rem;
+        padding: 0.3125rem 0.4375rem 0.25rem 0.4375rem;
+        border: 0.0625rem solid #fff;
+        background: var(
+          --primary,
+          linear-gradient(168deg, #ffda46 0%, #ffae00 100%)
+        );
+        box-shadow: 0px 0.25rem 1.25rem 0px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        @include hoverEffect(1.02);
+        svg {
+          fill: white;
+        }
+      }
+    }
+    .user-access-search-container {
+      @include flex(row, start, center, 1.25rem);
+      width: 100%;
+      margin-top: 1.25rem;
+      cursor: pointer;
+      .image-container {
+        padding: 0.625rem 0.8125rem;
+        border-radius: 50%;
+        border: 0.0625rem solid var(--border, #dcdcdc);
+        background: var(--foreground, #fff);
+        img {
+          height: 1.4375rem;
+        }
+      }
+    }
+    .user-access-cards-container {
+      // Styles for the user access cards container here
+      margin: 1.25rem 0 0 0;
+
+      .user-access-card {
+        // Styles for the user access card here
+        border-radius: 1rem;
+        background: #fff;
+        box-shadow: 0px 0.25rem 2rem 0px rgba(0, 0, 0, 0.07);
+        padding: 0.625rem 0.9375rem;
+        @include flex(row, space-between, center);
+
+        .left-area {
+          // Styles for the left area here'
+          @include flex(row, start, center, 1.25rem);
+
+          .image-container {
+            // Styles for the image container here
+
+            img {
+              width: 3.5rem;
+            }
+          }
+
+          .title-container {
+            // Styles for the title container here
+
+            .title {
+              color: var(--text-100, #000);
+              font-family: Outfit;
+              font-size: 1.125rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 1.225rem; /* 108.889% */
+            }
+
+            .last-login {
+              color: var(--text-40, #a7a7a7);
+              font-family: Outfit;
+              font-size: 1rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 1.225rem; /* 122.5% */
+            }
+          }
+        }
+
+        .right-area {
+          // Styles for the right area here
+          @include flex(row, start, center, 1.25rem);
+
+          .role-container {
+            border-radius: 3.0625rem;
+            background: linear-gradient(
+                0deg,
+                rgba(0, 158, 6, 0.2) 0%,
+                rgba(0, 158, 6, 0.2) 100%
+              ),
+              #fff;
+            box-shadow: 0px 0.25rem 2rem 0px rgba(0, 0, 0, 0.06);
+            padding: 0.3125rem 0.9375rem;
+
+            .role {
+              // Styles for the role text here
+              color: var(--green-100, #009e06);
+              font-family: Outfit;
+              font-size: 0.875rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+
+          img {
+            // Styles for the arrow-down image here
+            width: 0.75rem;
+            transform: rotate(-90deg);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-area {
+    @include flex(row, center, center, 0.9375rem);
+    margin-top: 1.875rem;
+    div {
+      width: 15.625rem;
+    }
+  }
+  .bottom-area-fixed {
+    position: fixed;
+    bottom: 1.25rem;
+    left: 50%;
+    z-index: 4;
+    transform: translateX(-50%);
+    @include flex(row, center, center, 0.9375rem);
+    margin-top: 1.875rem;
+    div {
+      width: 15.625rem;
+    }
+  }
+}

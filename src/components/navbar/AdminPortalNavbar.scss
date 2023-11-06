@@ -1,0 +1,34 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/variables.scss";
+.admin-portal-navbar {
+  @include flex(row, space-between, center);
+  padding: 7px 40px;
+  background-color: $black;
+  box-sizing: border-box;
+  width: 100vw;
+  .left-area {
+    @include flex(row, left, center, 30px);
+    img {
+      height: 40px;
+      padding: 15px 0;
+      cursor: pointer;
+    }
+    .nav-link {
+      color: #fff;
+      font-family: Outfit;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      cursor: pointer;
+      transition: 0.3s;
+      @include hoverEffect();
+    }
+    .selected {
+      color: $primary-yellow;
+    }
+  }
+  .right-area{
+    width: 200px;
+  }
+}

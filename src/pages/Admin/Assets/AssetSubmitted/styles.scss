@@ -1,0 +1,13 @@
+@import "/src/styles/mixins.scss";
+
+.gif-container {
+    @include flex(column, center, center);
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+.text-style {
+    color: white;
+    font-size: large;
+}

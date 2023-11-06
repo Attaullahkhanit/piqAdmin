@@ -1,0 +1,263 @@
+@import "/src/styles/mixins.scss";
+
+.overflow-scroll {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.add-asset-detail {
+  // Add any styles for the add-video-detail container here
+  background-color: #0c0c0f;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  @include flex(row, center, start);
+  position: relative;
+
+  .add-video-content-area {
+    // Add any styles for the add-video-content-area container here
+    width: 60%;
+    @include flex(row, center, center);
+    height: calc(100% - 10px);
+    @include hideScrollbar();
+
+    .video-panel {
+      width: 300px;
+      height: 70vh;
+      flex-shrink: 0;
+      border-radius: 44px;
+      border: 1px solid #565252;
+      background: #101014;
+    }
+
+    .asset-area {
+      position: relative;
+      padding-right: 75px;
+      display: block;
+    }
+
+    .asset-form {
+      display: block;
+      padding-bottom: 20px;
+      position: absolute;
+      z-index: 10;
+      left: 28%;
+      top: 46%;
+    }
+
+    .asset-label {
+      cursor: pointer;
+      color: var(--Primary, #FFAE00);
+      text-align: center;
+      font-family: Poppins;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      display: block;
+
+      p {
+        margin: 5px;
+      }
+    }
+
+    .asset-input {
+      display: none !important;
+    }
+
+    .tag {
+      display: inline-flex;
+      margin: 10px 5px;
+      padding: 14px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      border-radius: 64px;
+      border: 1px solid var(--Primary, #a7a7a7);
+      color: #a7a7a7;
+      background: #101014;
+      cursor: pointer;
+    }
+
+    .tag-selected {
+      display: inline-flex;
+      margin: 10px 5px;
+      padding: 14px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      border-radius: 64px;
+      border: 1px solid var(--Primary, #ffae00);
+      color: #ffae00;
+      background: #101014;
+      cursor: pointer;
+    }
+
+    .thumbnail-bg {
+      // Add any styles for the thumbnail background image here
+      height: 225px;
+      border-radius: 16px
+    }
+
+    .input-group {
+      @include flex(column, start, start, 10px);
+      margin-top: 20px;
+      width: 100%;
+
+      .input-group-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+
+        .input-creator-lable {
+          text-align: right;
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-decoration-line: underline;
+          background: var(--Primary, linear-gradient(168deg, #FFDA46 -110.09%, #FFAE00 118.06%));
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+
+      .lable-description {
+        color: #FFF;
+        font-family: Outfit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.4;
+      }
+
+      .input-label {
+        // Add any styles for the input label here
+        color: #fff;
+        font-family: Outfit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .tabs-container {
+        @include flex(row, start, center, 30px);
+        margin-bottom: 120px;
+        padding: 10px 0;
+        z-index: 3;
+
+        .tab {
+          @include flex(row, start, center, 10px);
+          cursor: pointer;
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+
+        .tab-label {
+          color: rgba(255, 255, 255, 0.7);
+          text-align: center;
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 19.6px;
+          /* 108.889% */
+        }
+
+        .tab-label-selected {
+          color: #ffae00;
+          text-align: center;
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 19.6px;
+          /* 108.889% */
+        }
+      }
+    }
+  }
+}
+
+.next-button-container {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: 250px;
+}
+
+// ----------------------- REACT TAGS INPUT STYLING -----------------------
+
+.ReactTags__tags {
+  @include flex(column, start, start, 5px);
+}
+
+.ReactTags__tagInputField {
+  border-radius: 57px;
+  display: block;
+  padding-left: 30px;
+  width: 30rem;
+  height: 40px;
+  color: white;
+  font-family: Outfit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.6px;
+  border: 1px solid #1f1f29;
+  background: #101014;
+  position: relative;
+
+  &::placeholder {
+    color: #a7a7a7;
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    background: none;
+    display: none;
+  }
+}
+
+.ReactTags__tag {
+  border-radius: 50px;
+  border: 1px solid #1f1f29;
+  color: #a7a7a7;
+  background-color: #101014;
+  font-size: small;
+  padding: 8px
+}
+
+.ReactTags__selected {
+  @include flex(row, center, center, 5px);
+}
+
+.ReactTags__remove {
+  border: none;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: none;
+  }
+}

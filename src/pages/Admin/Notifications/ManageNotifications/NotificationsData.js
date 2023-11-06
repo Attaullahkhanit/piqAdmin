@@ -1,0 +1,43 @@
+const NotificationsData = [
+    {
+      id: 1,
+      subject: 'Locations Near You!',
+      tags: ['#users','#users','#users','#users'],
+      message: `Dmmy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standardDmmy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...`,
+      audience: 'All',
+      type: 'Location',
+      frequency: 'Every other time',
+      reach: '24K',
+      opened: '9.5K',
+      openrate: '5.5K',
+      status: 'Live',
+    },
+    {
+      id: 2,
+      subject: 'Locations Near You!',
+      tags: ['#users','#users','#users','#users'],
+      message: `Dmmy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standardDmmy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...`,
+      audience: 'All',
+      type: 'Location',
+      frequency: 'Every other time',
+      reach: '24K',
+      opened: '9.5K',
+      openrate: '5.5K',
+      status: 'Live',
+    },
+    {
+      id: 3,
+      subject: 'Locations Near You!',
+      tags: ['#users','#users','#users','#users'],
+      message: `Dmmy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standardDmmy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...`,
+      audience: 'All',
+      type: 'Location',
+      frequency: 'Every other time',
+      reach: '24K',
+      opened: '9.5K',
+      openrate: '5.5K',
+      status: 'Live',
+    },
+  ]
+  
+  export default NotificationsData

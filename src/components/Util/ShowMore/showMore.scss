@@ -1,0 +1,19 @@
+.show-more-text {
+  font-family: Outfit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  a {
+    background: var(
+      --primary,
+      linear-gradient(168deg, #ffda46 0%, #ffae00 100%)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration-line: underline;
+    cursor: pointer;
+  }
+}

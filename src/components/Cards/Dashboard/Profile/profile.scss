@@ -1,0 +1,76 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/variables.scss";
+
+.profile-card {
+  border-bottom: 1px solid #ededed;
+  cursor: pointer;
+  .top-area {
+    @include flex(row, start, center, 20px);
+    padding: 10px 0;
+    .image-area {
+      img {
+        width: 50px;
+        border-radius: 50%;
+        height: 50px;
+        object-fit: cover;
+      }
+    }
+    .title-area {
+      .title {
+        font-family: Outfit;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+      .tags-container {
+        @include flex(row, start, center, 5px);
+        .tag-outer {
+          @include flex(row, start, center, 5px);
+          .tag {
+            font-family: Outfit;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: center;
+          }
+          .divider {
+            height: 3px;
+          }
+        }
+      }
+    }
+  }
+  .bottom-area {
+    @include flex(row, left, center, 20px);
+    padding-bottom: 15px;
+    .kpi-container {
+      .kpi-title-area {
+        @include flex(row, start, center, 5px);
+        padding: 5px 0;
+        img {
+          height: 20px;
+        }
+        .kpi-title {
+          font-family: Outfit;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 18px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: rgba($color: #6a6a6a, $alpha: 0.7);
+        }
+      }
+      .kpi-value {
+        font-family: Outfit;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+    }
+  }
+}

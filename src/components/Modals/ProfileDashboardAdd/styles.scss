@@ -1,0 +1,68 @@
+@import "/src/styles/mixins.scss";
+
+.modal-box {
+    box-sizing: border-box;
+    border-radius: 16px;
+    background: #FFF;
+    width: 564px;
+    height: 371px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: '2px solid #000';
+    box-shadow: 24;
+    padding: 32px;
+    background-color: white;
+    outline: none !important;
+    .modal-modal-title {
+        color: var(--text-100, #000);
+        font-family: Outfit;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .modal-modal-description {
+        color: var(--text-40, #A7A7A7);
+        font-family: Outfit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19.6px; /* 108.889% */
+        margin-bottom: 20px;
+    } 
+    .name-text {
+        color: var(--text-70, #6A6A6A);
+        font-family: Outfit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-bottom: 10px;
+    }
+    .button-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+        .button-cancel {
+            width: 230px;
+            height: 67px;
+            flex-shrink: 0;
+            border-radius: 40px;
+            border: 1px solid var(--Primary, #FFDA46);
+            margin-right: 30px;
+        }
+        .button-create {
+            width: 230px;
+            height: 67px;
+            flex-shrink: 0;
+            border-radius: 40px;
+            background: var(--Button---Primary-Gradient, linear-gradient(168deg, #FFDA46 -110.09%, #FFAE00 118.06%));
+        }
+    }
+}

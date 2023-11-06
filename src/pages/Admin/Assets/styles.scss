@@ -1,0 +1,180 @@
+@import "/src/styles/mixins.scss";
+
+.overflow-scroll {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.add-asset-detail {
+  // Add any styles for the add-video-detail container here
+  background-color: #0c0c0f;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  @include flex(row, center, start);
+  position: relative;
+
+  .add-video-content-area {
+    // Add any styles for the add-video-content-area container here
+    width: 60%;
+    @include flex(row, center, center);
+    height: calc(100% - 10px);
+    @include hideScrollbar();
+
+    .video-panel {
+      width: 300px;
+      height: 70vh;
+      flex-shrink: 0;
+      border-radius: 44px;
+      border: 1px solid #565252;
+      background: #101014;
+    }
+
+    .asset-area {
+      position: relative;
+      padding-right: 75px;
+      display: block;
+    }
+
+    .asset-form {
+      display: block;
+      padding-bottom: 20px;
+      position: absolute;
+      z-index: 10;
+      left: 28%;
+      top: 46%;
+    }
+
+    .asset-label {
+      cursor: pointer;
+      color: var(--Primary, #FFAE00);
+      text-align: center;
+      font-family: Poppins;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      display: block;
+
+      p {
+        margin: 5px;
+      }
+    }
+
+    .asset-input {
+      display: none !important;
+    }
+
+    .tags-container {
+      width: 500px; // Set your desired fixed width
+      overflow-x: auto; // Enable horizontal scrolling if necessary
+      white-space: nowrap; // Prevent button text from wrapping
+    }
+
+    ::-webkit-scrollbar {
+      width: 0.1em;
+      /* Set a very small width */
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: transparent;
+      /* Hide the thumb */
+    }
+
+    .tag {
+      display: inline-flex;
+      margin: 10px 5px;
+      padding: 14px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      border-radius: 64px;
+      border: 1px solid var(--Primary, #a7a7a7);
+      color: #a7a7a7;
+      background: #101014;
+      cursor: pointer;
+    }
+
+    .tag-selected {
+      display: inline-flex;
+      margin: 10px 5px;
+      padding: 14px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      border-radius: 64px;
+      border: 1px solid var(--Primary, #ffae00);
+      color: #ffae00;
+      background: #101014;
+      cursor: pointer;
+    }
+
+    .thumbnail-bg {
+      // Add any styles for the thumbnail background image here
+      height: 225px;
+      border-radius: 16px
+    }
+
+    .input-group {
+      @include flex(column, start, start, 10px);
+      margin-top: 20px;
+      width: 100%;
+
+      .input-label {
+        // Add any styles for the input label here
+        color: #fff;
+        font-family: Outfit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .tabs-container {
+        @include flex(row, start, center, 30px);
+        margin-bottom: 120px;
+        padding: 10px 0;
+        z-index: 3;
+
+        .tab {
+          @include flex(row, start, center, 10px);
+          cursor: pointer;
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+
+        .tab-label {
+          color: rgba(255, 255, 255, 0.7);
+          text-align: center;
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 19.6px;
+          /* 108.889% */
+        }
+
+        .tab-label-selected {
+          color: #ffae00;
+          text-align: center;
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 19.6px;
+        }
+      }
+    }
+  }
+}
+
+.next-button-container {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: 250px;
+}

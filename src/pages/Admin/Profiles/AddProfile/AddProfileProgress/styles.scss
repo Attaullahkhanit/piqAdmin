@@ -1,0 +1,106 @@
+@import "/src/styles/mixins.scss";
+
+.add-profile-progress-completed {
+  @include flex(column, center, center, 20px);
+  height: calc(100vh - 80px);
+  img {
+    width: 150px;
+  }
+  .title {
+    color: var(--text-100, #000);
+    font-family: Outfit;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+.add-profile-progress {
+  @include flex(row, center, start);
+  position: relative;
+  height: calc(100vh - 80px);
+  .progress-container {
+    width: 40%;
+    padding: 40px;
+
+    .title {
+      color: var(--text-100, #000);
+      font-family: Outfit;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .sub-title {
+      color: var(--text-40, #a7a7a7);
+      font-family: Outfit;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 40px;
+    }
+
+    .progress-card {
+      // .left-area styles
+      border-radius: 16px;
+      background: var(--foreground, #fff);
+      box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.06);
+      @include flex(row, start, center, 15px);
+      padding: 16px;
+      margin-top: 20px;
+      width: 100%;
+      .left-area {
+        img {
+          width: 40px;
+        }
+      }
+
+      // .right-area styles
+      .right-area {
+        width: 100%;
+        @include flex(row, space-between, center);
+        // .content-area styles
+        .content-area {
+          // .card-title styles
+          .card-title {
+            color: var(--text-100, #000);
+            font-family: Outfit;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%; /* 30px */
+          }
+
+          // .card-detail styles
+          .card-detail {
+            color: var(--text-40, #a7a7a7);
+            font-family: Outfit;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 27px */
+          }
+        }
+
+        // .arrow-container styles
+        .arrow-container {
+          cursor: pointer;
+          @include hoverEffect();
+          img {
+            width: 37px;
+          }
+        }
+      }
+    }
+  }
+  // .complete-button-container styles
+  .complete-button-container {
+    // Your styles for .complete-button-container here
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+  }
+}

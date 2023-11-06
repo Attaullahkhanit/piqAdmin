@@ -1,0 +1,99 @@
+@import "/src/styles/mixins.scss";
+
+.checkout {
+  @include flex(row, center, start);
+  .checkout-container {
+    width: 40%;
+    padding: 40px 0;
+
+    .inner-container {
+      // Your styles for .inner-container here
+
+      .title {
+        color: var(--text-100, #000);
+        font-family: Outfit;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 10px;
+      }
+
+      .sub-title {
+        color: var(--text-40, #a7a7a7);
+        font-family: Outfit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19.6px; /* 108.889% */
+      }
+    }
+
+    .payment-container {
+      border-radius: 16px;
+      border: 1px solid var(--border, #dcdcdc);
+      background: var(--foreground, #fff);
+      padding: 20px;
+      margin: 40px 0;
+
+      .payment-row {
+        // Your styles for .payment-row here
+        @include flex(row, space-between, center);
+        padding: 15px 0;
+        border-bottom: 1px solid var(--border, #ededed);
+
+        .title {
+          color: var(--text-40, #a7a7a7);
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .price {
+          color: var(--text-100, #000);
+          text-align: right;
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+
+      .total-row {
+        // Your styles for .total-row here
+        @include flex(row, space-between, center);
+        padding: 15px 0;
+        .title {
+          color: var(--text-100, #000);
+          font-family: Outfit;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .price {
+          color: var(--green-100, #009e06);
+          text-align: right;
+          font-family: Outfit;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+    }
+
+    .payment-button-container {
+      width: 100%;
+      @include flex(row, center, start);
+
+      .proceed-button {
+       width: 50%;
+      }
+    }
+  }
+}

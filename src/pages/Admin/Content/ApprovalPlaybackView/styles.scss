@@ -1,0 +1,87 @@
+@import "/src/styles/mixins.scss";
+
+.content-approval-playback-view {
+  @include flex(row, center, start);
+  .content-area {
+    width: 45%;
+    border-left: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    padding: 40px 20px;
+    .header-container {
+      @include flex(row, start, center, 20px);
+      .header-text {
+        color: var(--text-100, #000);
+        font-family: Outfit;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      .list-button {
+        cursor: pointer;
+        background: var(
+          --primary,
+          linear-gradient(168deg, #ffda46 0%, #ffae00 100%)
+        );
+        filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.2));
+        padding: 9px 10px;
+        border-radius: 30px;
+        img {
+          height: 20px;
+        }
+      }
+    }
+    .video-area {
+      height: calc(100vh - 165px);
+      overflow-y: scroll;
+      @include hideScrollbar();
+    }
+    .discard-out {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    .accept-out {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    .opacity-zero {
+      opacity: 0;
+    }
+    .video-play-container {
+      margin-top: 30px;
+      @include flex(row, center, center, 10%);
+      transition: 0.5s ease-out;
+
+      .cross-button {
+        padding: 20px 22px;
+        background-color: #000;
+        border-radius: 50px;
+        border: 2px solid #dcdcdc;
+        cursor: pointer;
+        img {
+          width: 25px;
+        }
+      }
+
+      .video-container {
+        img {
+          width: 250px;
+        }
+        transition: 0.7s ease-out;
+        position: relative;
+      }
+
+      .tick-button {
+        padding: 20px 22px;
+        background-color: #000;
+        border-radius: 50px;
+        border: 2px solid #ffda46;
+        cursor: pointer;
+        img {
+          width: 25px;
+        }
+      }
+    }
+  }
+}

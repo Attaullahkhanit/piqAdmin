@@ -1,0 +1,199 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/variables.scss";
+
+.video-all-overview-card {
+  // Your styles for .video-overview-card here
+  position: relative;
+  width: 177px;
+  height: 202px;
+  box-sizing: border-box;
+  padding: 0;
+  cursor: pointer;
+  @include hoverEffect(1.02);
+  background-color: black;
+  border-radius: 10px;
+  overflow: hidden;
+  .video-image {
+    // Your styles for .video-image here
+    position: absolute;
+    width: 100%;
+    height: 315px;
+    // z-index: -1;
+    border-radius: 16px;
+  }
+  .video-details-container {
+    // Your styles for .video-details-container here
+    height: 205px;
+    position: relative;
+    .top-area {
+      // Your styles for .top-area here
+      position: absolute;
+      top: 0;
+      box-sizing: border-box;
+    //   padding: 10px;
+      width: calc(100% - 20px);
+      @include flex(row, space-between, center);
+      .video-fram-container {
+        width: 150px;
+        position: relative;
+        box-sizing: border-box;
+        .frame-thumbnail-container-first {
+            width: 100px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 111;
+        }
+        .frame-thumbnail-container {
+            width: 100%;
+            box-sizing: border-box;
+        }
+      }
+      .video-all-overview-card .video-details-container .top-area .container-image {
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        margin-bottom: -3px !important;
+    
+    }
+      .video-view-container {
+        position: absolute;
+        .video-container {
+            display: flex;
+            flex-direction: row !important;
+            // display: inline-flex;
+            padding: 4px 5px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            border-radius: 76px;
+            background: rgba(0, 0, 0, 0.50);
+            margin-left: 140px;
+            margin-bottom: 160px;
+            margin-top: 10px;
+            .numberic-value {
+            color: #FFF;
+            font-family: Outfit;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 15.4px; /* 96.25% */
+        }
+        }
+      }
+      .horizantal-imags-container {
+        //  margin-left: -3px;
+      }
+        .container-image  {
+            width: 100px;
+            height: 100px;
+            flex-shrink: 0;
+            border-radius: 5px;
+        }
+      .pending {
+        border-radius: 76px;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 8px 10px;
+        color: #fff;
+        font-family: Outfit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      .draggable-icon {
+        // Your styles for .draggable-icon here
+        position: absolute;
+        width: 20px;
+        cursor: pointer; 
+        margin-left: 30px;
+        z-index: 1111;
+        margin-top: 50px;
+      }
+      .views-container {
+        // Your styles for .views-container here
+        @include flex(row, start, center, 10px);
+        border-radius: 76px;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        .views {
+          color: #fff;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 15.4px; /* 96.25% */
+        }
+        .video-icon {
+          // Your styles for .video-icon here
+          width: 15px;
+        }
+      }
+    }
+
+    .bottom-area {
+      // Your styles for .bottom-area here
+      position: absolute;
+      bottom: 0;
+      padding: 10px;
+      width: calc(100% - 20px);
+      @include flex(row, space-between, end);
+      border-radius: 0px 0px 8px 8px;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.3) 35.42%,
+        rgba(0, 0, 0, 0.7) 100%
+      );
+      .title {
+        color: #fff;
+        font-family: Outfit;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 24px */
+        // width: 0px;
+        z-index: 1111;
+      }
+
+      .price {
+        // Your styles for .price here
+        color: var(--constructive, #00bc06);
+        text-align: right;
+        font-family: Outfit;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 24px */
+      }
+    }
+  }
+}
+
+.video-all-overview-card .video-details-container .top-area .container-image {
+    width: 98px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    margin-bottom: -4px !important;
+}
+
+.video-all-overview-card .video-details-container .top-area .draggable-icon {
+    position: absolute;
+    width: 20px;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-top: 33px;
+}
+.video-all-overview-card .video-details-container .top-area .video-view-container .video-container {
+    display: flex;
+    flex-direction: row !important;
+    padding: 4px 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 76px;
+    background: rgba(0, 0, 0, 0.50);
+    margin-left: 147px;
+    /* margin-bottom: 160px; */
+    margin-top: 39px;
+}

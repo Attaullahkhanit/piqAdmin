@@ -1,0 +1,82 @@
+@import "/src/styles/mixins.scss";
+
+.profile-match-modal {
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 16px;
+    padding: 20px;
+    outline: none !important;
+    .title {
+      color: var(--text-100, #000);
+      font-family: Outfit;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 20px;
+    }
+    .current-profile-container {
+      border-radius: 16px;
+      border: 1px solid var(--Border, #dcdcdc);
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 30px;
+      position: relative;
+      .tag-container {
+        position: absolute;
+        top: -20px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 57px;
+        border: 1px solid var(--Primary, #ffda46);
+        background: #fff;
+        .tag-title {
+          font-family: Outfit;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          background: var(
+            --Primary,
+            linear-gradient(168deg, #ffda46 -110.09%, #ffae00 118.06%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    .potential-match-container {
+      border-radius: 16px;
+      border: 1px solid var(--Border, #dcdcdc);
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 25px;
+      position: relative;
+      .tag-container {
+        position: absolute;
+        top: -20px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 57px;
+        border: 1px solid var(--red-100, #ec3f3f);
+        background: #fff;
+        .tag-title {
+          color: var(--red-100, #ec3f3f);
+          text-align: right;
+          font-family: Outfit;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}

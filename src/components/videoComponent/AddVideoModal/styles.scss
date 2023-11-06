@@ -1,0 +1,126 @@
+@import "/src/styles/mixins.scss";
+
+.add-video-modal {
+  // Add any styles for the outer container here
+
+  // Add any styles for the image cropper modal here
+
+  @include flex(row, center, center, 0);
+  .modal-container {
+    // Add any styles for the modal container here
+    width: 560px;
+    border-radius: 16px;
+    border: 1px solid #6a6a6a;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(50px);
+    padding: 40px;
+    @include flex(column, start, center, 20px);
+
+    .disclaimer-area {
+      // Add any styles for the disclaimer area here
+
+      .disclaimer-title {
+        // Add any styles for the disclaimer title here
+        color: #fff;
+        text-align: center;
+        font-family: Outfit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.7;
+      }
+    }
+
+    .modal-image-contaier {
+      // Add any styles for the modal image container here
+      img {
+        height: 200px;
+      }
+    }
+
+    .modal-title-container {
+      // Add any styles for the modal title container here
+      text-align: center;
+      .modal-title {
+        // Add any styles for the modal title here
+        color: #fff;
+        font-family: Outfit;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      .modal-subtitle {
+        color: #fff;
+        text-align: center;
+        font-family: Outfit;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    .modal-list-container {
+      // Add any styles for the modal list container here
+
+      .modal-list-title {
+        // Add any styles for the modal list title here
+        color: var(--primary-solid, #ffae00);
+        text-align: center;
+        font-family: Outfit;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 19.6px; /* 98% */
+        text-transform: uppercase;
+      }
+
+      .modal-list {
+        // Add any styles for the modal list here
+        list-style-type: none;
+        padding: 0;
+
+        .modal-list-item {
+          // Add any styles for the modal list item here
+          @include flex(row, start, center, 10px);
+          img {
+            height: 14px;
+          }
+          .modal-list-item-text {
+            // Add any styles for the modal list item text here
+            color: #fff;
+            text-align: center;
+            font-family: Outfit;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    .modal-button-container {
+      // Add any styles for the modal button container here
+      @include flex(row, center, center, 20px);
+      width: 100%;
+    }
+
+    .modal-footer {
+      // Add any styles for the modal footer here
+      color: #fff;
+      text-align: center;
+      font-family: Outfit;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      cursor: pointer;
+      text-decoration-line: underline;
+    }
+  }
+}

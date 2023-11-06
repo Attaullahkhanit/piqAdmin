@@ -1,0 +1,10 @@
+@import '/src/styles/mixins.scss';
+
+.business-layout{
+    height: 100vh;
+    overflow: hidden;
+    .content-container{
+        margin-top: 83px;
+        height:calc(100vh - 80px);
+    }
+}

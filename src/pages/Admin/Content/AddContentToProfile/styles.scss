@@ -1,0 +1,47 @@
+@import "/src/styles/mixins.scss";
+
+.add-content-to-profile {
+  @include flex(row, center, start);
+  box-sizing: border-box;
+  .content-container {
+    box-sizing: border-box;
+    width: 45%;
+    padding: 10px 10px;
+    border: 1px solid var(--border, #dcdcdc);
+    background: #fff;
+    height: 100vh;
+    .title-text {
+      color: var(--text-100, #000);
+      font-family: Outfit;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin: 15px 0;
+    }
+    .profiles-container {
+      height: calc(100vh - 250px);
+      overflow-x: hidden;
+      width: 100%;
+      @include hideScrollbar();
+      .cards-section {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+    }
+    .content-screen-business-profile-card {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      padding: 15px;
+      margin: 0px;
+      border-bottom: 1px solid #ededed;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+    }
+  }
+}

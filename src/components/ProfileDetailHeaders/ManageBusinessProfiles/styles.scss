@@ -1,0 +1,43 @@
+@import "/src/styles/mixins.scss";
+
+.manage-business-profiles-haeder {
+  @include flex(row, space-between, center);
+  padding: 40px 0;
+
+  .title {
+    color: var(--text-100, #000);
+    font-family: Outfit;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .links-container {
+    @include flex(row, start, center, 20px);
+
+    .link-text {
+      color: var(--text-70, #6a6a6a);
+      font-family: Outfit;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.408px;
+      white-space: nowrap;
+      cursor: pointer;
+      @include hoverEffect();
+
+      &-selected {
+        color: #000;
+        font-family: Outfit;
+        white-space: nowrap;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.408px;
+      }
+    }
+  }
+}

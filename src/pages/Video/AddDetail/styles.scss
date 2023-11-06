@@ -1,0 +1,78 @@
+@import "/src/styles/mixins.scss";
+
+.add-video-detail {
+  // Add any styles for the add-video-detail container here
+  background-color: #0c0c0f;
+  height: calc(100% + 10px);
+  @include flex(row, center, start);
+  position: relative;
+  .add-video-content-area {
+    // Add any styles for the add-video-content-area container here
+    width: 35%;
+    @include flex(column, start, center);
+    height: calc(100% - 10px);
+
+    overflow-y: scroll;
+    @include hideScrollbar();
+
+    .thumbnail-bg {
+      // Add any styles for the thumbnail background image here
+      height: 225px;
+      border-radius: 16px
+    }
+    .input-group {
+      @include flex(column, start, start, 10px);
+      margin-top: 20px;
+      width: 100%;
+      .input-label {
+        // Add any styles for the input label here
+        color: #fff;
+        font-family: Outfit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .tabs-container {
+        @include flex(row, start, center, 30px);
+        margin-bottom: 120px;
+        padding: 10px 0;
+        z-index: 3;
+        .tab {
+          @include flex(row, start, center, 10px);
+          cursor: pointer;
+        }
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+        .tab-label {
+          color: rgba(255, 255, 255, 0.7);
+          text-align: center;
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 19.6px; /* 108.889% */
+        }
+        .tab-label-selected {
+          color: #ffae00;
+          text-align: center;
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 19.6px; /* 108.889% */
+        }
+      }
+    }
+  }
+  .next-button-container {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 250px;
+  }
+}

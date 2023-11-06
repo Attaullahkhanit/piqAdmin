@@ -1,0 +1,122 @@
+@import "/src/styles/mixins.scss";
+
+.edit-thumbnail-page {
+  // Add any styles for the edit-thumbnail-page container here
+  background-color: #0c0c0f;
+  @include flex(row, center, start);
+  height: calc(100% + 10px);
+  position: relative;
+
+  .edit-thumbnail-content-area {
+    // Add any styles for the edit-thumbnail-content-area container here
+    width: 40%;
+    @include flex(row, center, start);
+    position: relative;
+    height: 100%;
+    .edit-thumbnail-bg {
+      // Add any styles for the edit-thumbnail background image here
+      height: 70vh;
+      position: absolute;
+      z-index: 1;
+      border-radius: 0px 0px 22px 22px;
+      background-color: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.7) 46.88%,
+        #000 100%
+      );
+    }
+    .video-bg {
+      height: 70vh;
+      position: absolute;
+      z-index: 1;
+      border-radius: 22px;
+      overflow: hidden;
+      top: 30px;
+      background-color: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.7) 46.88%,
+        #000 100%
+      );
+    }
+
+    .thumbnail-slider {
+      // Add any styles for the thumbnail slider image here
+      position: absolute;
+      bottom: 35vh;
+      width: 50%;
+      z-index: 3;
+      .MuiSlider-rail {
+        height: 100px;
+        background-color: #fff;
+        opacity: 0.2;
+        backdrop-filter: blur(10px);
+      }
+      .MuiSlider-track {
+        height: 100px;
+        background-color: #000;
+        opacity: 0.4;
+        backdrop-filter: blur(10px);
+        border: none;
+      }
+      .MuiSlider-thumb {
+        height: 110px;
+        width: 4px;
+        background-color: #fff;
+        box-shadow: none;
+        border-radius: 0px;
+        &::after {
+          height: 100px;
+          width: 2px;
+          background-color: #fff;
+        }
+      }
+    }
+
+    .title-text {
+      // Add any styles for the title text here
+      color: #fff;
+      font-family: Outfit;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 25.2px; /* 114.545% */
+      position: absolute;
+      bottom: 25vh;
+      z-index: 3;
+    }
+
+    .subtitle-text {
+      // Add any styles for the subtitle text here
+      position: absolute;
+      bottom: 22vh;
+      z-index: 3;
+      text-align: center;
+      font-family: Outfit;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 19.6px; /* 108.889% */
+      letter-spacing: -0.408px;
+      text-decoration-line: underline;
+      background: var(
+        --button-primary-gradient,
+        linear-gradient(168deg, #ffda46 0%, #ffae00 100%)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .next-button-container {
+    // Add any styles for the next-button-container here
+    position: absolute;
+    z-index: 2;
+    bottom: 40px;
+    width: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

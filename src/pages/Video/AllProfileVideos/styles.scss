@@ -1,0 +1,153 @@
+@import "/src/styles/mixins.scss";
+
+.all-profile-videos-component {
+  @include flex(row, center, start);
+  background-color: #0c0c0f;
+  height: calc(100vh - 71px);
+  position: relative;
+  .primary-button-container {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    z-index: 4;
+  }
+
+  .all-profile-videos-content-container {
+    width: 500px;
+    padding: 30px 0;
+    .title {
+      // Title styles
+      color: #fff;
+      font-family: Outfit;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 20px;
+    }
+
+    .all-profile-videos-content {
+      @include flex(row, space-between, start, 15px);
+      flex-wrap: wrap;
+      height: calc(100vh - 160px);
+      overflow-y: scroll;
+      @include hideScrollbar();
+      .add-new-video-container {
+        width: 240px;
+        border-radius: 8px;
+        border: 1px solid #565252;
+        background: #101014;
+        @include flex(column, center, center, 10px);
+        height: 320px;
+        cursor: pointer;
+        .plus-icon {
+          // Plus icon styles
+        }
+
+        .add-new-video-text {
+          // "Add" text styles
+          color: var(--primary, #ffae00);
+          text-align: center;
+          font-family: Outfit;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+
+      .present-video-container {
+        height: 320px;
+        width: 240px;
+        position: relative;
+        .video-thumbnail {
+          object-fit: cover;
+          // Video thumbnail styles
+          height: inherit;
+          width: inherit;
+          position: absolute;
+          z-index: 1;
+          border-radius: 16px;
+        }
+
+        .background-fade {
+          // Background fade styles
+          position: absolute;
+          height: 30%;
+          width: 100%;
+          bottom: -10px;
+          z-index: 2;
+        }
+
+        .top-area {
+          z-index: 3;
+          position: absolute;
+          top: 0px;
+          padding: 15px;
+          @include flex(row, space-between, center);
+          width: 210px;
+          .status-pill {
+            border-radius: 76px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 8px 10px;
+
+            .status-text {
+              // Status text styles
+              color: #fff;
+              font-family: Outfit;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+            }
+          }
+
+          .trash-button {
+            border-radius: 76px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 8px 9px 6px 9px;
+            cursor: pointer;
+            @include hoverEffect();
+            .trash-icon {
+              // Trash icon styles
+              height: 22px;
+              width: 22px;
+            }
+          }
+        }
+
+        .bottom-area {
+          z-index: 3;
+          position: absolute;
+          bottom: 0px;
+          padding: 15px;
+          width: 210px;
+          @include flex(row, space-between, center);
+          .video-title {
+            // Video title styles
+            width: 100px;
+            color: #fff;
+            font-family: Outfit;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%; /* 24px */
+          }
+
+          .video-price {
+            // Video price styles
+            color: var(--constructive, #00bc06);
+            text-align: right;
+            font-family: Outfit;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%; /* 24px */
+          }
+        }
+      }
+    }
+  }
+}

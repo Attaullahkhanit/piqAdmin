@@ -1,0 +1,119 @@
+@import "/src/styles/mixins.scss";
+
+.payement-method {
+  @include flex(row, center, start);
+  .payment-method-container {
+    // Your styles for .payment-method-container here
+    width: 40%;
+    position: relative;
+    padding: 40px 0;
+    height: calc(100vh - 160px);
+    .title {
+      color: var(--text-100, #000);
+      font-family: Outfit;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 30px;
+    }
+
+    .row-full {
+      // Your styles for .row here
+      @include flex(column, center, start, 10px);
+      margin-bottom: 20px;
+    }
+    .row {
+      // Your styles for .row here
+      @include flex(row, start, center, 10px);
+      margin-bottom: 20px;
+    }
+    .col {
+      @include flex(column, center, start, 10px);
+      width: 50%;
+    }
+
+    .field-title {
+      color: var(--text-70, #6a6a6a);
+      font-family: Outfit;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .divider {
+      @include flex(row, center, center);
+      margin-top: 40px;
+      .divider-text {
+        color: var(--text-40, #a7a7a7);
+        text-align: center;
+        font-family: Outfit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16.8px; /* 105% */
+      }
+    }
+
+    .payment-types-container {
+      // Your styles for .payment-types-container here
+      @include flex(row, center, center, 10px);
+      .apple-pay {
+        // Your styles for .apple-pay here
+        width: 65px;
+        background-color: #000;
+        border-radius: 50%;
+        cursor: pointer;
+        @include hoverEffect();
+      }
+
+      .payment-logo {
+        // Your styles for .payment-logo here
+        width: 125px;
+        cursor: pointer;
+        @include hoverEffect();
+      }
+    }
+
+    .bottom-container {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      .total-payment-container {
+        // Your styles for .total-payment-container here
+        @include flex(row, space-between, center);
+        padding: 20px 0;
+
+        .total-payment-title {
+          // Your styles for .total-payment-title here
+          color: var(--text-100, #000);
+          font-family: Outfit;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .total-payment-value {
+          // Your styles for .total-payment-value here
+          color: var(--green-100, #009e06);
+          text-align: right;
+          font-family: Outfit;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+      .button-area {
+        @include flex(row, center, center);
+        .button-container {
+          width: 40%;
+        }
+      }
+    }
+  }
+}

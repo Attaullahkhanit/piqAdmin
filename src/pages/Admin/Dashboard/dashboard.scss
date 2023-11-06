@@ -1,0 +1,163 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/variables.scss";
+
+:root {
+  --base-font-size: 16px;
+}
+
+.dashboard {
+  padding: 1.125rem;
+  overflow-x: hidden;
+
+  .grid-container {
+    @include flex(row, center, start, 1.125rem);
+
+    .dash-section {
+      @include hideScrollbar();
+      height: calc(100vh - 7.5rem);
+      background-color: white;
+      width: 33%;
+      border-radius: 0.9rem;
+      border: 0.1125rem solid #dcdcdc;
+      overflow-y: scroll;
+      position: relative;
+      .top-section {
+        position: sticky;
+        background-color: #fff;
+        top: 0;
+      }
+      .cards-section {
+        padding: 0.5625rem 1.125rem;
+      }
+    }
+
+    .dash-container {
+      height: calc(100vh - 7.5rem);
+      width: 33%;
+      @include flex(column, center, start, 0.5625rem);
+    }
+
+    .sub-dash-section {
+      @include hideScrollbar();
+      height: calc(50% - 0.3125rem);
+      background-color: white;
+      width: 100%;
+      border-radius: 0.9rem;
+      border: 0.1125rem solid #dcdcdc;
+      overflow-y: scroll;
+      position: relative;
+
+      .cards-section {
+        padding: 0.5625rem 1.125rem;
+      }
+    }
+
+    .top-section-container {
+      position: sticky;
+      background-color: white;
+      top: 0;
+      
+    }
+    .top-section {
+      @include flex(row, space-between, center);
+      padding: 0.84375rem 1.125rem;
+      border-bottom: 0.05625rem solid #dcdcdc;
+
+      button {
+        background-color: transparent;
+        border: 0.05625rem solid #dcdcdc;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 2.53125rem;
+        width: 2.8125rem;
+        margin-left: 0.5625rem;
+
+        &:focus {
+          outline: none;
+        }
+
+        .cross {
+          height: 1.125rem;
+          width: 1.125rem;
+        }
+      }
+
+      .top-section-text {
+        color: #000;
+        font-family: Outfit;
+        font-size: 1.2375rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      .top-icons-container {
+        @include flex(row, space-between, center, 0.84375rem);
+
+        img {
+          height: 1.125rem;
+          cursor: pointer;
+          transition: 0.27s;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    .filters-container {
+      @include flex(row, start, center, 10px);
+      @include hideScrollbar();
+      // position: sticky;
+      background-color: white;
+      // top: 52px;
+      padding: 10px 20px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      .filter {
+        border-radius: 64px;
+        border: 1px solid var(--Border, #dcdcdc);
+        background: var(--Foreground, #fff);
+        padding: 10px 20px;
+        cursor: pointer;
+        @include hoverEffect();
+        .filter-text {
+          color: var(--text-40, #a7a7a7);
+          text-align: center;
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 19.6px; /* 108.889% */
+          white-space: nowrap;
+        }
+      }
+      .filter-selected {
+        border-radius: 64px;
+        border: 1px solid var(--Primary, #ffda46);
+        background: var(--Foreground, #fff);
+        padding: 10px 20px;
+        @include hoverEffect();
+        cursor: pointer;
+        .filter-text {
+          text-align: center;
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 19.6px; /* 108.889% */
+          background: var(
+            --Primary,
+            linear-gradient(168deg, #ffda46 -110.09%, #ffae00 118.06%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          white-space: nowrap;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+}

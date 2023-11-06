@@ -1,0 +1,132 @@
+@import "/src/styles/mixins.scss";
+
+.icon-input-message-text {
+  font-size: 12px !important;
+  color: red !important;
+  padding-left: 10px;
+}
+
+.icon-input-field {
+  @include flex(row, start, center, 10px);
+  border-radius: 57px;
+  border: 1px solid var(--border, #dcdcdc);
+  background: var(--foreground, #fff);
+  width: 100%;
+  position: relative;
+
+  .icon-left {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+
+  .icon-right {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  .clickable {
+    cursor: pointer;
+  }
+
+  img,
+  svg {
+    height: 20px;
+  }
+
+  .normal {
+    display: block;
+    margin: 10px 10px 10px 30px;
+    padding-right: 30px;
+    width: 100%;
+    border: none;
+    height: 20px;
+    color: var(--text-70, #6a6a6a);
+    font-family: Outfit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px;
+
+    &::placeholder {
+      color: #a7a7a7;
+      font-family: Outfit;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    background: none;
+    display: none;
+  }
+}
+
+.icon-input-field-dark {
+  @include flex(row, start, center, 10px);
+  border-radius: 57px;
+  border: 1px solid #1f1f29;
+  background: #101014;
+  width: 100%;
+  position: relative;
+
+  .icon-left {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+
+  .icon-right {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+
+  img,
+  svg {
+    height: 20px;
+  }
+
+  input {
+    display: block;
+    margin: 10px 10px 10px 30px;
+    padding-right: 30px;
+    width: 100%;
+    border: none;
+    height: 20px;
+    color: white;
+    background: #101014;
+    font-family: Outfit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px;
+    &::placeholder {
+      color: #a7a7a7;
+      font-family: Outfit;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    background: none;
+    display: none;
+  }
+}

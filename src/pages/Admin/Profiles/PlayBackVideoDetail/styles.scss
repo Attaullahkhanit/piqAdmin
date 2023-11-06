@@ -1,0 +1,38 @@
+@import '/src/styles/mixins.scss';
+
+
+.playbackvideo-page{
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    @include hideScrollbar();
+    z-index: 3;
+    background: #0C0C0F;
+    .dash-section {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 100px;
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-shrink: 0;
+        background-color: #0C0C0F;
+        .button-container {
+            width: 100%;
+            display: flex;
+            height: 30px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            gap: 15px;
+            .button-outline {
+                height: 50px;
+            }
+        }        
+    }
+}

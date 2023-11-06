@@ -1,0 +1,61 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/variables.scss";
+
+.business-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100vw - 60px);
+  padding: 30px;
+  z-index: 1;
+  @include flex(row, space-between, end);
+  .left-area {
+    @include flex(row, start, center, 20px);
+    .footer-item {
+      color: #fff;
+      font-family: Outfit;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      @include hoverEffect();
+      cursor: pointer;
+    }
+    .footer-item-black {
+      font-family: Outfit;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      @include hoverEffect();
+      cursor: pointer;
+    }
+  }
+
+  .right-area {
+    .profile-indicator-container {
+      border-radius: 75px;
+      background: #212121;
+      padding: 15px 25px;
+      border: 2px solid $primary-yellow;
+      .title {
+        color: #fff;
+        font-family: Outfit;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.408px;
+      }
+      .name {
+        color: rgba(255, 255, 255, 0.7);
+        font-family: Outfit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.408px;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import "/src/styles/mixins.scss";
+
+.choose-video-modal {
+  // Add any styles for the modal here
+  @include flex(row, center, center, 0);
+
+  .modal-container {
+    // Add any styles for the modal container here
+    width: 400px;
+    border-radius: 16px;
+    border: 1px solid #6a6a6a;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(40px);
+    position: relative;
+    padding: 30px;
+
+    .cross {
+      // Add any styles for the cross image here
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      height: 16px;
+      cursor: pointer;
+      @include hoverEffect();
+    }
+
+    .modal-content-container {
+      // Add any styles for the modal content container here
+      @include flex(column, start, center, 10px);
+        margin-bottom: 20px;
+      img {
+        // Add any styles for the camera image here
+        height: 50px;
+      }
+
+      .choose-text {
+        // Add any styles for the "Choose" text here
+        color: #fff;
+        font-family: Outfit;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      .title-text {
+        // Add any styles for the title text here
+        color: #fff;
+        font-family: Outfit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19.6px; /* 108.889% */
+        opacity: 0.4;
+      }
+    }
+
+    .modal-button-container {
+      // Add any styles for the modal button container here
+      @include flex(row, start, center, 10px);
+    }
+  }
+}

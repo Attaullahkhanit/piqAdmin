@@ -1,0 +1,73 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/variables.scss";
+.manage-content-card {
+  @include flex(row, left, start, 15px);
+  border-bottom: 1px solid #ededed;
+  padding: 10px 0;
+  width: 100%;
+  cursor: pointer;
+  .left-area {
+    img {
+      width: 90px;
+      height: 90px;
+      border-radius: 16px;
+      object-fit: cover;
+    }
+  }
+  .right-area {
+    width: 100%;
+    .title-container {
+      @include flex(row, space-between, center);
+      width: 100%;
+      .title {
+        font-family: Outfit;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+      .time {
+        font-family: Outfit;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: #a7a7a7;
+      }
+    }
+    .tags-container {
+      @include flex(row, start, center, 5px);
+      width: 100%;
+      padding: 5px 0;
+      flex-wrap: wrap;
+      .tag-group {
+        @include flex(row, start, center, 5px);
+      }
+      .icon {
+        height: 15px;
+      }
+      .divider {
+        height: 4px;
+      }
+      .tags {
+        font-family: Outfit;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #6a6a6a;
+      }
+    }
+    .user-detail-container {
+      @include flex(row, start, center, 10px);
+      img {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

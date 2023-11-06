@@ -1,0 +1,301 @@
+@import "/src/styles/mixins.scss";
+.content-detail {
+  padding: 40px 10%;
+  height: calc(100vh - 140px);
+  overflow-y: auto;
+  .title-area {
+    margin-bottom: 40px;
+    .title-text {
+      color: var(--text-100, #000);
+      font-family: Outfit;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 10px;
+    }
+
+    .description-text {
+      color: var(--text-40, #a7a7a7);
+      font-family: Outfit;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19.6px;
+    }
+  }
+
+  .heading {
+    color: var(--text-70, #6a6a6a);
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .header-area {
+    padding: 20px;
+    @include flex(row, space-between, center);
+    .profile-details-area {
+      @include flex(row, start, center, 15px);
+      .profile-image {
+        width: 80px;
+        border: 2px solid #ffae00;
+        border-radius: 50%;
+      }
+
+      .profile-title-container {
+        .profile-title {
+          color: var(--text-100, #000);
+          text-align: left;
+          font-family: Outfit;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+
+        .tags-container {
+          @include flex(row, start, center, 5px);
+          max-width: 500px;
+          flex-wrap: wrap;
+          .tag-group {
+            @include flex(row, start, center, 5px);
+            .tag {
+              color: var(--text-100, #000);
+              text-align: center;
+              font-family: Outfit;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+
+            .dot-image {
+              height: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .stats-area {
+      @include flex(row, start, center, 20px);
+      .stats-container {
+        @include flex(row, start, center, 20px);
+        .stat-group {
+          .stat-title {
+            color: var(--text-70, #6a6a6a);
+            text-align: center;
+            font-family: Outfit;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19.6px; /* 122.5% */
+          }
+
+          .stat-value {
+            color: var(--text-100, #000);
+            text-align: center;
+            font-family: Outfit;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+      }
+
+      .view-more-container {
+        .view-more-text {
+          text-align: center;
+          font-family: Outfit;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          cursor: pointer;
+          text-decoration: underline;
+          background: var(
+            --primary,
+            linear-gradient(168deg, #ffda46 0%, #ffae00 100%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+
+  .details-area {
+    @include flex(row, start, start, 30px);
+    width: 100%;
+
+    .form-container {
+      width: 100%;
+      .form-group-half {
+        @include flex(row, start, start, 20px);
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .tags-container {
+        width: 500px; // Set your desired fixed width
+        overflow-x: auto; // Enable horizontal scrolling if necessary
+        white-space: nowrap; // Prevent button text from wrapping
+    
+        .tag {
+          display: inline-flex;
+          margin: 10px 5px;
+          padding: 14px 20px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+          border-radius: 64px;
+          border: 1px solid var(--Primary, #a7a7a7);
+          color: #a7a7a7;
+          background: white;
+          cursor: pointer;
+        }
+    
+        .tag-selected {
+          display: inline-flex;
+          margin: 10px 5px;
+          padding: 14px 20px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+          border-radius: 64px;
+          border: 1px solid var(--Primary, #ffae00);
+          color: #ffae00;
+          background: white;
+          cursor: pointer;
+        }
+      }
+
+      ::-webkit-scrollbar {
+        width: 0.1em;
+        /* Set a very small width */
+      }
+  
+      ::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        /* Hide the thumb */
+      }
+
+      .field-container {
+        box-sizing: border-box;
+        width: 100%;
+        
+        .owner-tags-option-container {
+          width: 62vw;
+          height: 50px;
+          overflow-x: scroll;  /* Enable horizontal scrolling */
+          white-space: nowrap; /* Prevent tags from wrapping to the next line */
+          padding: 14px 0;
+          display: flex;
+          gap: 5px;
+          overflow-y: hidden;
+
+          //background-color: yellow; /* Optional background color */
+        .tags-container-box {
+          @include flex(row, start, center, 5px);
+          box-sizing: border-box;
+          // flex-wrap:wrap;
+          white-space: nowrap;
+          width: 100%;
+          margin: 10px;
+          .tag-selected {
+            box-sizing: border-box;
+            border: 1px solid #ffae00;
+            border-radius: 64px;
+            padding: 14px 20px;
+            color: #ffae00;
+            cursor: pointer;
+            @include hoverEffect();
+          }
+        }
+      }
+      .owner-tags-option-container::-webkit-scrollbar {
+        display: none;
+    }
+          .tag {
+            cursor: pointer;
+            border-radius: 64px;
+            border: 1px solid var(--border, #dcdcdc);
+            padding: 14px 20px;
+            @include hoverEffect();
+        }
+        .tags-container {
+          @include flex(row, start, center, 5px);
+          width: 100%;
+          flex-wrap: wrap;
+          margin: 10px 0;
+          .tag-selected {
+            border: 1px solid #ffae00;
+            border-radius: 64px;
+            padding: 14px 20px;
+            color: #ffae00;
+            cursor: pointer;
+            @include hoverEffect();
+            .tag-text {
+              text-align: center;
+              font-family: Outfit;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 19.6px; /* 108.889% */
+              background: var(
+                --primary,
+                linear-gradient(168deg, #ffda46 0%, #ffae00 100%)
+              );
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+          .field-title {
+            color: var(--text-70, #6a6a6a);
+            font-family: Outfit;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 5px;
+          }
+
+          .tag {
+            cursor: pointer;
+            border-radius: 64px;
+            border: 1px solid var(--border, #dcdcdc);
+            padding: 14px 20px;
+            @include hoverEffect();
+            .tag-text {
+              color: var(--text-40, #a7a7a7);
+              text-align: center;
+              font-family: Outfit;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 19.6px; /* 108.889% */
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .actions-area {
+    margin-top: 30px;
+    @include flex(row, center, center, 20px);
+    .button-container {
+      @include flex(row, center, center, 20px);
+      width: 60%;
+    }
+  }
+}

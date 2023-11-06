@@ -1,0 +1,132 @@
+@import "/src/styles/mixins.scss";
+
+.image-cropper-modal {
+  @include flex(row, center, center, 0);
+  .modal-container {
+    padding: 30px 0;
+    background-color: var(--white, #fff);
+    border-radius: 16px;
+    width: 460px;
+    .image-cropper-modal-container {
+      border-radius: 16px;
+      //   padding: 20px;
+      overflow: hidden;
+      position: relative;
+      height: 400px;
+      width: 400px;
+      margin: 0 auto;
+
+      .corner-top-left {
+        @include disableDrag();
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 26px;
+        width: 26px;
+        z-index: 2;
+      }
+      .corner-top-right {
+        @include disableDrag();
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: rotate(90deg);
+        height: 26px;
+        width: 26px;
+        z-index: 2;
+      }
+      .corner-bottom-left {
+        @include disableDrag();
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: rotate(270deg);
+        height: 26px;
+        width: 26px;
+        z-index: 2;
+      }
+      .corner-bottom-right {
+        @include disableDrag();
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: rotate(180deg);
+        height: 26px;
+        width: 26px;
+        z-index: 2;
+      }
+      .edge-top {
+        @include disableDrag();
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 6px;
+        width: 50px;
+        z-index: 2;
+      }
+      .edge-right {
+        @include disableDrag();
+        position: absolute;
+        transform: rotate(90deg) translateY(-22px);
+        top: 50%;
+        right: 0;
+        height: 6px;
+        width: 50px;
+        z-index: 2;
+      }
+      .edge-bottom {
+        @include disableDrag();
+        position: absolute;
+        transform: translateX(50%);
+        bottom: 0;
+        right: 50%;
+        height: 6px;
+        width: 50px;
+        z-index: 2;
+      }
+      .edge-left {
+        @include disableDrag();
+        position: absolute;
+        transform: rotate(90deg) translateY(22px);
+        top: 50%;
+        left: 0;
+        height: 6px;
+        width: 50px;
+        z-index: 2;
+      }
+      .reactEasyCrop_CropArea {
+        // box-shadow: none;
+        z-index: 1;
+      }
+      .reactEasyCrop_Image {
+        margin: 0;
+      }
+    }
+    .image-cropper-modal-footer {
+      padding: 10px 30px 0px 30px;
+      .top-area {
+        margin-bottom: 20px;
+        .footer-header {
+          color: var(--text-100, #000);
+          font-family: Outfit;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+        .footer-description {
+          color: var(--text-40, #a7a7a7);
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 19.6px; /* 108.889% */
+        }
+      }
+      .bottom-area {
+        @include flex(row, start, center, 10px);
+      }
+    }
+  }
+}

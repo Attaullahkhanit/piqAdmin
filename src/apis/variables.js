@@ -1,2 +1,2 @@
-export const URL = "https://slyde.prismware.ca/";
-export const PIQ_BASE_URL = "https://backend.takeapiq.com";
+export const URL = process.env.REACT_APP_URL;
+export const PIQ_BASE_URL = process.env.REACT_APP_PIQ_BASE_URL;
